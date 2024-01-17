@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { ToDo } from "../../ToDo.props";
+import "./index.scss";
 
-// Components
 
 interface ToDoItemProps {
   item:ToDo;
@@ -10,7 +10,7 @@ interface ToDoItemProps {
 }
 
 const ToDoItem: FunctionComponent<ToDoItemProps> = (props) => {
-  return <div>
+  return <div className={props.isDone ? "done-todo" : ""}>
     <input type="checkbox" checked={props.isDone} onChange={(event) => props.onSetChecked(event.currentTarget.checked)} />
     <label>{props.item.value}</label>
   </div>;
