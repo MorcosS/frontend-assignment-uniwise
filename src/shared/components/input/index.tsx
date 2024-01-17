@@ -1,8 +1,9 @@
 
 import { UniInputProps } from "./input.props";
 import "./index.scss";
+import { FunctionComponent } from "react";
 // the idea behind having a shared input is to use it task 1 and 2
-const UniInput = ({value, onChange, placeholder, type, name}:UniInputProps)=>{
+const UniInput: FunctionComponent<UniInputProps>  = ({value, onChange, placeholder, type, name})=>{
   return(
     <input
             className="uni-input"

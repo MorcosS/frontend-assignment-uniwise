@@ -12,7 +12,7 @@ const Task1: FunctionComponent = () => {
   const onSubmit = () => {
     // If you want to do something with form submit
     if(isValidating && !isValidForm(email,password).email && !isValidForm(email,password).password){
-      alert(`Submitted successfully!`);
+      window.location.href = "/task/2";
     }else{
       setIsValidating(true);
     }

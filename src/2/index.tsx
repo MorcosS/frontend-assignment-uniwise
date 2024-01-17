@@ -1,15 +1,25 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 
 // Components
-import Input from "./components/Input";
 import List from "./components/List";
+import { UniInput } from "../shared/components/input";
+import { tempData } from "./list.util";
 
 const Task2: FunctionComponent = () => {
+  useEffect(() => {
+    //a mock call as if we getting data from backend and setting it to our list
+    setData(tempData);
+  },[]);
+
+  const [data, setData] = useState<string[]>([]);
+  const [searchValue, setSearchValue] = useState<string>("");
+ 
+    
   return (
     <div>
-      <Input />
+      <UniInput placeholder="Search" value={searchValue} onChange={(event) => setSearchValue(event.currentTarget.value)} name="search" />
       <br />
-      <List />
+      <List data={tempData.filter(function (str) { return str.toLowerCase().includes(searchValue.toLowerCase()); })} />
     </div>
   );
 };

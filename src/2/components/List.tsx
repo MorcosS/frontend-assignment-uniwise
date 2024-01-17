@@ -13,10 +13,14 @@ import Item from "./Item";
  * and remove the ListProps interface
  */
 
-interface ListProps {}
+interface ListProps {
+  data: string[]
+}
 
 const List: FunctionComponent<ListProps> = (props) => {
-  return <div>#List goes here#</div>;
+  return <div>
+    {props.data.map((item) => <Item value={item}/>)}
+  </div>;
 };
 
 export default List;
