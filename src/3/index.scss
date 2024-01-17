@@ -1,4 +1,12 @@
 /* DO NOT CHANGE THIS ROOT CLASS NAME*/
 #task-3 {
   /* Styles goes here */
+  .todo-input{
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  &:focus{
+    border: none;
+    border-bottom: 1px solid black;
+  }
 }
