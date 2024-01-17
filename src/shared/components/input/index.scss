@@ -1,0 +1,13 @@
+// style for uni input
+.uni-input{
+    font-size: large;
+    border-radius: 5px;
+    height: 24px;
+    &:hover {
+        border-color: #a4c4f0;
+      }
+
+    &:focus {
+        background-color: #a4c4f0;
+    }
+}
