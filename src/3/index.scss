@@ -4,9 +4,19 @@
   .todo-input{
     border: none;
     border-bottom: 1px solid black;
+    font-size: large;
   }
   &:focus{
     border: none;
     border-bottom: 1px solid black;
+  }
+  .list-container{
+    margin: 8px 8px;
+  }
+  .list-tile{
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(10, 14, 228);
+    padding-right: 16px;
   }
 }
